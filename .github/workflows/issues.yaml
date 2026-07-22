@@ -1,0 +1,13 @@
+name: Outut Events
+on: issues
+jobs:
+  output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Event Data
+        run: |
+          echo "Event Name: ${{ toJSON(github.event_name) }}"
+          echo "Action: ${{ toJSON(github.event.action) }}"
+          echo "Issue Number: ${{ toJSON(github.event.issue.number) }}"
+          echo "Issue Title: ${{ toJSON(github.event.issue.title) }}"
+          echo "Issue Body: ${{ toJSON(github.event.issue.body) }}"
