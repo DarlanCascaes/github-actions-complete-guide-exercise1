@@ -56,5 +56,8 @@ jobs:
         run: npm ci
       - name: Deploy the Code
         run: echo "Deploying..."
+      - name: Upload to Artifacts
+        uses: actions/upload-artifact@v7
+        path: dist
         
         
