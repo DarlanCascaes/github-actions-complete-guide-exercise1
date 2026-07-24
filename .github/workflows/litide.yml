@@ -69,7 +69,7 @@ jobs:
       - name: List Artifacts
         run: ls
       - name: Output Filenames
-        run: echo "{{ needs.build.outputs.script-file }}"
+        run: echo "${{ needs.build.outputs.script-file }}"
       - name: Install Dependencies
         run: npm ci
       - name: Deploy the Code
